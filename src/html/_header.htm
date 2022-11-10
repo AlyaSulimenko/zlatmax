@@ -1,32 +1,401 @@
 <header class="header">
   <div class="header__top top-header">
     <div class="top-header__container">
-      <div class="top-header__menu menu">
-        <nav class="menu__body">
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a href="" class="menu__link">Про нас</a>
-            </li>
-            <li class="menu__item">
-              <a href="" class="menu__link">Оплата і доставка</a>
-            </li>
-            <li class="menu__item"><a href="" class="menu__link">Новини</a></li>
-            <li class="menu__item">
-              <a href="" class="menu__link">Контакти</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <a href="" class="top-header__user _icon-user"> Особистий кабінет</a>
-      <button type="button" class="icon-menu">
-        <span></span>
-      </button>
+      <nav class="top-header__menu menu-top-header">
+        <ul data-da=".menu__body,991.98" class="menu-top-header__list">
+          <li class="menu-top-header__item menu-top-header__item_catalogue">
+            <a
+              href=""
+              data-catalogue
+              class="menu-top-header__link menu-top-header__link_catalogue _icon-arrow-bottom"
+              >Каталог товарів</a
+            >
+          </li>
+          <li class="menu-top-header__item">
+            <a href="" class="menu-top-header__link">Про нас</a>
+          </li>
+          <li class="menu-top-header__item">
+            <a href="" class="menu-top-header__link">Оплата і доставка</a>
+          </li>
+          <li class="menu-top-header__item">
+            <a href="" class="menu-top-header__link">Новини</a>
+          </li>
+          <li class="menu-top-header__item">
+            <a href="" class="menu-top-header__link">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="" class="top-header__user _icon-user"
+        ><span>Особистий кабінет</span></a
+      >
+
+      <nav hidden class="menu">
+        <button type="button" class="menu__icon icon-menu">
+          <span></span>
+        </button>
+        <div class="menu__body"></div>
+      </nav>
     </div>
   </div>
   <div class="header__body body-header">
-    <div class="body-header__container"></div>
+    <div class="body-header__container">
+      <a href="" class="body-header__logo"></a>
+      <div
+        data-da=".catalogue-header__container,479.98"
+        class="body-header__search"
+      >
+        <form action="#" class="search-header">
+          <button
+            type="submit"
+            class="search-header__button _icon-search"
+          ></button>
+          <input
+            autocomplete="off"
+            type="text"
+            name="form[]"
+            data-error="Помилка"
+            placeholder="Пошук"
+            class="search-header__input"
+          />
+        </form>
+      </div>
+      <div class="body-header__actions actions-header">
+        <a href="" class="actions-header__location _icon-location">Київ</a>
+        <div
+          data-da=".top-header__container,991.98,first"
+          class="actions-header__phones phones-header"
+        >
+          <div data-spollers class="phones-header__items">
+            <div class="phones-header__item">
+              <a href="tel:00380441986058" class="phones-header__phone"
+                ><span>+38 044 1986-058</span></a
+              >
+              <button
+                type="button"
+                data-spoller
+                class="phones-header__arrow _icon-arrow-bottom"
+              ></button>
+              <ul class="phones-header__list">
+                <li>
+                  <a href="tel:00380441987293" class="phones-header__phone"
+                    >+38 044 1987-293</a
+                  >
+                </li>
+                <li>
+                  <a href="tel:00380442015178" class="phones-header__phone"
+                    >+38 044 2015-178</a
+                  >
+                </li>
+                <li>
+                  <a href="tel:00380441955048" class="phones-header__phone"
+                    >+38 044 1955-048</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            data-popup="#callback"
+            class="phones-header__callback"
+          >
+            Замовити дзвінок
+          </button>
+        </div>
+        <a
+          href=""
+          data-da=".top-header__container,991.98,2"
+          class="actions-header__favourite _icon-favorite"
+        ></a>
+        <a
+          href=""
+          data-da=".top-header__container,991.98,3"
+          class="actions-header__cart cart-header"
+        >
+          <div class="cart-header__icon _icon-cart"><span>0</span></div>
+          <div class="cart-header__body">
+            <div class="cart-header__summ">0 грн</div>
+            <div class="cart-header__link">Оформити замовлення</div>
+          </div>
+        </a>
+      </div>
+    </div>
   </div>
   <div class="header__catalogue catalogue-header">
-    <div class="catalogue-header__container"></div>
+    <div class="catalogue-header__container">
+      <nav class="catalogue-header__menu menu-catalogue">
+        <button class="menu-catalogue__back _icon-back">Назад</button>
+        <ul class="menu-catalogue__list">
+          <li class="menu-catalogue__item">
+            <button href="" data-parent="1" class="menu-catalogue__link">
+              Каталог ножів
+            </button>
+          </li>
+          <li class="menu-catalogue__item">
+            <button href="" data-parent="2" class="menu-catalogue__link">
+              Клинкова зброя
+            </button>
+          </li>
+          <li class="menu-catalogue__item">
+            <button href="" data-parent="3" class="menu-catalogue__link">
+              Сувенірні вироби
+            </button>
+          </li>
+          <li class="menu-catalogue__item">
+            <button href="" data-parent="4" class="menu-catalogue__link">
+              Ліхтарі ARMYTEK
+            </button>
+          </li>
+          <li class="menu-catalogue__item">
+            <button href="" data-parent="5" class="menu-catalogue__link">
+              Супутні товари
+            </button>
+          </li>
+          <li class="menu-catalogue__item">
+            <button href="" data-parent="6" class="menu-catalogue__link">
+              Топори
+            </button>
+          </li>
+        </ul>
+        <div class="menu-catalogue__submenu submenu-catalogue">
+          <button class="submenu-catalogue__back _icon-back">Назад</button>
+          <div class="submenu-catalogue__container">
+            <div class="submenu-catalogue__block" data-submenu="1">
+              <div class="submenu-catalogue__category">
+                <a href="" class="submenu-catalogue__link-category"
+                  >Категорії ножів</a
+                >
+              </div>
+              <div class="submenu-catalogue__category">
+                <a href="" class="submenu-catalogue__link-category"
+                  >Виробництво ножів</a
+                >
+              </div>
+              <div class="submenu-catalogue__category">
+                <a href="" class="submenu-catalogue__link-category"
+                  >Ножі зі сталі</a
+                >
+              </div>
+              <div class="submenu-catalogue__category">
+                <a href="" class="submenu-catalogue__link-category"
+                  >Заточування та полірування ножів</a
+                >
+              </div>
+              <div class="submenu-catalogue__category">
+                <a href="" class="submenu-catalogue__link-category"
+                  >Майстерня</a
+                >
+              </div>
+              <ul class="submenu-catalogue__list">
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link">обробні ножі</a>
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link">
+                    Туристичні ножі</a
+                  >
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link">Ножі мисливські</a>
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link">Булатні ножі</a>
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link">Ножі з дамаску</a>
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link"
+                    >Тактичного призначення</a
+                  >
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link">Кетальні ножі</a>
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link">Мачете і кукри</a>
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link">Ножі кухонні</a>
+                </li>
+              </ul>
+              <ul class="submenu-catalogue__list">
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link">Ножі ВСУ</a>
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link"> Ножі Азов</a>
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link">Ножі СБУ</a>
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link">Ножі Укрзброя</a>
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link">Ножі Збройник</a>
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link">Ножі Залужного</a>
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link">Ножі Рєзнікова</a>
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link"
+                    >Ножі Зеленського</a
+                  >
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link">Ножі Стиль У</a>
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link"
+                    >Збройова майстерня</a
+                  >
+                </li>
+              </ul>
+              <ul class="submenu-catalogue__list">
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link"
+                    >Ножі зі сталі 40х102С2М</a
+                  >
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link"
+                    >Ножі зі сталі 95х18</a
+                  >
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link"
+                    >Ножі зі сталі 100х13м</a
+                  >
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link"
+                    >Ножі зі сталі 110х18м-ШД</a
+                  >
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link"
+                    >Ножі зі сталі ЭИ-107 ТЦ</a
+                  >
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link"
+                    >Ножі зі сталі 50х14МФ</a
+                  >
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link"
+                    >Ножі зі сталі AUS-8</a
+                  >
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link"
+                    >Ножі зі сталі К340</a
+                  >
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link"
+                    >Ножі зі сталі M390</a
+                  >
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link"
+                    >Ножі зі сталі ЭП-766</a
+                  >
+                </li>
+              </ul>
+              <ul class="submenu-catalogue__list">
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link">Паста ГОІ</a>
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link">Алмазна паста</a>
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link"
+                    >Бруски та каміння для заточування</a
+                  >
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link"
+                    >Заточувальні системи</a
+                  >
+                </li>
+              </ul>
+              <ul class="submenu-catalogue__list">
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link">Ножові клинки</a>
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link"
+                    >Заготівлі для ножів</a
+                  >
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link">Лиття для ножів</a>
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link"
+                    >Матеріали для рукоятей</a
+                  >
+                </li>
+                <li class="submenu-catalogue__item">
+                  <a href="" class="submenu-catalogue__link"
+                    >Догляд за рукоятями ножів</a
+                  >
+                </li>
+              </ul>
+              <div class="submenu-catalogue__footer">
+                <a href="" class="submenu-catalogue__all">Дивитися всі</a>
+              </div>
+              <div class="submenu-catalogue__footer">
+                <a href="" class="submenu-catalogue__all">Дивитися всі</a>
+              </div>
+              <div class="submenu-catalogue__footer">
+                <a href="" class="submenu-catalogue__all">Дивитися всі</a>
+              </div>
+              <div class="submenu-catalogue__footer">
+                <a href="" class="submenu-catalogue__all">Дивитися всі</a>
+              </div>
+              <div class="submenu-catalogue__footer">
+                <a href="" class="submenu-catalogue__all">Дивитися всі</a>
+              </div>
+            </div>
+            <div class="submenu-catalogue__block" data-submenu="2">
+              <div class="submenu-catalogue__category">
+                <a href="" class="submenu-catalogue__link-category"
+                  >Очікується</a
+                >
+              </div>
+            </div>
+            <div class="submenu-catalogue__block" data-submenu="3">
+              <div class="submenu-catalogue__category">
+                <a href="" class="submenu-catalogue__link-category"
+                  >Очікується</a
+                >
+              </div>
+            </div>
+            <div class="submenu-catalogue__block" data-submenu="4">
+              <div class="submenu-catalogue__category">
+                <a href="" class="submenu-catalogue__link-category"
+                  >Очікується</a
+                >
+              </div>
+            </div>
+            <div class="submenu-catalogue__block" data-submenu="5">
+              <div class="submenu-catalogue__category">
+                <a href="" class="submenu-catalogue__link-category"
+                  >Очікується</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
   </div>
 </header>
