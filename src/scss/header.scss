@@ -418,7 +418,6 @@
   &__link {
     position: relative;
     display: flex;
-
     text-transform: capitalize;
     transition: color 0.3s ease 0s;
     &[data-parent] {
@@ -563,23 +562,30 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: rem(30) rem(15);
+    padding: rem(30) rem(15) rem(30) 0;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    @media (max-width: $tablet) {
-      position: fixed;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: $darkBackground;
-      padding: rem(25) rem(15) rem(50) rem(15);
-      transition: left 0.3s ease 0s;
-      &._submenu-catalogue-list-chosen {
-        display: block;
+    &_1 {
+      @media (max-width: $tablet) {
+        position: fixed;
+        top: 0;
         left: 0;
-        z-index: 8;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: $darkBackground;
+        padding: rem(25) rem(15) rem(50) rem(15);
+        transition: left 0.3s ease 0s;
+        color: $accentColor;
+        a {
+          @include adaptiveValue("font-size", 30, 18, 0, 992, 320);
+        }
+
+        &._submenu-list_chosen {
+          left: 0;
+          display: block;
+          z-index: 8;
+        }
       }
     }
   }
@@ -612,9 +618,6 @@
   &__all {
     align-self: flex-start;
     color: $accentColor;
-    padding-top: rem(30);
-    padding-right: rem(15);
-    padding-left: rem(15);
   }
 }
 

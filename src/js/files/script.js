@@ -7,11 +7,9 @@ console.log(window.innerWidth);
 const documentActions = (event) => {
   const targetElement = event.target;
   const submenuCatalogue = document.querySelector(".submenu-catalogue");
-  //clicking on .menu-catalogue__link:
-  if (
-    targetElement.closest("[data-parent]") //&& window.innerWidth >= 992
-  ) {
-    const submenuId = targetElement.dataset.parent;
+  const submenuId = targetElement.dataset.parent;
+  //clicking on .menu-catalogue__link in desctop mode
+  if (targetElement.closest("[data-parent]") && window.innerWidth >= 992) {
     const activeLink = document.querySelector("._catalogue-link-active");
     const submenuBlockChosen = document.querySelector(
       `[data-submenu="${submenuId}"]`
@@ -26,40 +24,33 @@ const documentActions = (event) => {
       targetElement.classList.add("_catalogue-link-active");
       submenuBlockChosen.classList.add("_submenu-block-chosen");
     };
-    //if any link in it is orange(active) & U cklick on other, that link looses activity, new clicked gets, appr submenu block opens
+
     if (activeLink && activeLink !== targetElement) {
       activeLink.classList.remove("_catalogue-link-active");
       showActiveBlock();
-    }
-    // if U click on active link it looses activity, appr submenu block closes
-    else if (activeLink && activeLink === targetElement) {
+    } else if (activeLink && activeLink === targetElement) {
       targetElement.classList.remove("_catalogue-link-active");
       submenuBlockChosen.classList.remove("_submenu-block-chosen");
-    }
-    //if no link is active, just make the clicked one active & show appr submenu
-    else if (!activeLink) {
+    } else if (!activeLink) {
       showActiveBlock();
     }
     event.preventDefault();
   }
-  //else if (
-  //   targetElement.closest("[data-parent]") &&
-  //   window.innerWidth < 992
-  // ) {
-  //   const submenuId = targetElement.dataset.parent;
-  //   const submenuListChosen = document.querySelector(
-  //     `[data-list="${submenuId}"]`
-  //   );
-
-  //   submenuListChosen.classList.toggle("_submenu-catalogue-list-chosen");
-  //   console.log("now style");
-  // }
-  //To open 'Catalogue of goods': .menu-catalogue gets class of .catalogue-open
+  //clicking on .menu-catalogue__link in tablet mode
+  else if (targetElement.closest("[data-parent]") && window.innerWidth < 992) {
+    const submenuListChosen = document.querySelector(
+      `[data-list="${submenuId}"]`
+    );
+    submenuListChosen.classList.add("_submenu-list_chosen");
+    console.log("class submenu-catalogue__list_chosen added to data-list");
+    event.preventDefault();
+  }
+  //To open 'Catalogue of goods'
   if (targetElement.closest(".menu-top-header__link_catalogue")) {
     document.documentElement.classList.add("catalogue-open");
     event.preventDefault();
   }
-  //On ckiking <-Go Back in 'Catalogue of goods' .menu-catalogue looses .catalogue-open, links in it loose .active(orange),submenu blocks loose .chosen
+  //On ckiking <-Go Back in 'Catalogue of goods'
   if (targetElement.closest(".menu-catalogue__back")) {
     document.documentElement.classList.remove("catalogue-open");
     document.querySelector("_catalogue-link-active")
@@ -70,7 +61,7 @@ const documentActions = (event) => {
       : null;
     event.preventDefault();
   }
-  //On clicking <-Go Back in 'Catalogue of knives' etc .menu-catalogue looses .catalogue-open, links in it loose .active(orange),submenu blocks loose .chosen
+  //On clicking <-Go Back in 'Catalogue of knives' etc
   if (targetElement.closest(".submenu-catalogue__back")) {
     submenuCatalogue.classList.remove("_submenu-catalogue-opened");
     document
