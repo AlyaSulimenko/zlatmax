@@ -477,6 +477,7 @@
   }
 }
 .submenu-catalogue {
+  z-index: 6;
   @media (max-width: $tablet) {
     position: fixed;
     top: 0;
@@ -487,6 +488,7 @@
     background-color: $darkBackground;
     padding: rem(25) rem(15) rem(50) rem(15);
     transition: left 0.3s ease 0s;
+
     &._submenu-catalogue-opened {
       display: block;
       left: 0;
