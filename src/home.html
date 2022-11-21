@@ -370,6 +370,83 @@
             </div>
           </div>
         </section>
+        <section class="page__hits hits-products">
+          @@include('html/_product-slider.htm',{"title":"Хіти продажів",
+          "link":"Перейти до каталогу" })
+        </section>
+        <section class="page__newest newest">
+          @@include('html/_product-newest.htm',{"title":"Новинки",
+          "link":"Більше новинок"})
+        </section>
+        <section class="page__promotion promotion">
+          @@include('html/_product-promotion.htm',{"title":"Акції",
+          "link":"Перейти до усіх акцій" })
+        </section>
+        <section class="page__blog blog">
+          <div class="blog__container">
+            <h2 class="blog__title">Наші статті</h2>
+            <div class="blog__items">
+              <article class="blog__article article-blog">
+                <a
+                  href=""
+                  data-popup="article-img-1"
+                  class="article-blog__img-ibg"
+                  ><img src="img/mainpage/articles-module/01.jpg" alt=""
+                /></a>
+                <div class="article-blog__body">
+                  <h4 class="article-blog__title">
+                    <a
+                      href=""
+                      data-popup="article-title-1"
+                      class="article-blog__title-link"
+                      >Все про ножі: як правильно oбрати</a
+                    >
+                  </h4>
+                  <div class="article-blog__date">21.11.2022</div>
+                </div>
+              </article>
+              <article class="blog__article article-blog">
+                <a href="" class="article-blog__img-ibg"
+                  ><img src="img/mainpage/articles-module/02.jpg" alt=""
+                /></a>
+                <div class="article-blog__body">
+                  <h4 class="article-blog__title">
+                    <a href="" class="article-blog__title-link"
+                      >Як правильно oбрати ліхтар</a
+                    >
+                  </h4>
+                  <div class="article-blog__date">18.11.2022</div>
+                </div>
+              </article>
+              <article class="blog__article article-blog">
+                <a href="" class="article-blog__img-ibg"
+                  ><img src="img/mainpage/articles-module/03.jpg" alt=""
+                /></a>
+                <div class="article-blog__body">
+                  <h4 class="article-blog__title">
+                    <a href="" class="article-blog__title-link"
+                      >Кухонні ножі для господарок</a
+                    >
+                  </h4>
+                  <div class="article-blog__date">10.11.2022</div>
+                </div>
+              </article>
+              <article class="blog__article article-blog">
+                <a href="" class="article-blog__img-ibg"
+                  ><img src="img/mainpage/articles-module/04.jpg" alt=""
+                /></a>
+                <div class="article-blog__body">
+                  <h4 class="article-blog__title">
+                    <a href="" class="article-blog__title-link"
+                      >Кухонні ножі для господарок</a
+                    >
+                  </h4>
+                  <div class="article-blog__date">01.11.2022</div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
       </main>
       @@include('html/_footer.htm',{})
     </div>
