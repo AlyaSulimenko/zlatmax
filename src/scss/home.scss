@@ -53,7 +53,6 @@
   &__controll {
   }
 }
-
 .controll-main-block {
   display: inline-grid;
   grid-auto-flow: column;
@@ -134,7 +133,6 @@
     font-size: rem(18);
   }
 }
-
 .swiper {
 }
 .swiper-wrapper {
@@ -197,8 +195,6 @@
       justify-content: center;
     }
   }
-}
-.button {
 }
 .media-main-block {
   display: flex;
@@ -349,18 +345,14 @@
   @include adaptiveValue("padding-top", 100, 30);
   @include adaptiveValue("padding-bottom", 70, 30);
   // .catalogue-cards__container
-
   &__container {
     display: grid;
-
     gap: rem(30);
     @media (min-width: $mobileSmall) {
       grid-template-columns: repeat(auto-fit, minmax(rem(400), 1fr));
     }
   }
-
   // .catalogue-cards__item
-
   &__item {
   }
 }
@@ -491,7 +483,7 @@
 //=================================================================================================================================
 .blog {
   @include adaptiveValue("padding-top", 120, 15);
-  @include adaptiveValue("padding-bottom", 60, 10);
+  @include adaptiveValue("padding-bottom", 60, 15);
   // .blog__container
 
   &__container {
@@ -531,7 +523,7 @@
   height: 100%;
   @media (any-hover: hover) {
     &:hover {
-      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.3);
     }
   }
   // .article-blog__img-ibg
@@ -581,4 +573,120 @@
     line-height: math.div(34, 16);
     color: $sideColor;
   }
+}
+//=================================================================================================================================
+//=================================================================================================================================
+.additional {
+  @include adaptiveValue("padding-top", 60, 15);
+  @include adaptiveValue("padding-bottom", 60, 15);
+  // .additional__container
+
+  &__container {
+    display: grid;
+    @media (min-width: $mobileSmall) {
+      grid-template-columns: repeat(auto-fit, minmax(rem(600), 1fr));
+    }
+    gap: rem(50);
+  }
+
+  // .additional__item
+
+  &__item {
+  }
+}
+.item-additional {
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  min-height: rem(290);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease 0s;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @media (any-hover: hover) {
+    &:hover {
+      box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  // .item-additional__body
+
+  &__body {
+    padding: rem(30);
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .item-additional__title
+  &__title {
+    &:not(:last-child) {
+      @include adaptiveValue("padding-bottom", 50, 15);
+    }
+
+    &-link {
+      display: inline-block;
+      font-weight: 600;
+      font-size: rem(24);
+      @include adaptiveValue("font-size", 24, 20, 0, 992, 320);
+      line-height: math.div(34, 24);
+      &:after {
+        content: "";
+        margin-top: rem(15);
+        display: block;
+        height: 3px;
+        width: rem(68);
+        background-color: $accentColor;
+        transition: width 0.8s ease 0s;
+      }
+      &:hover {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  // .item-additional__descr
+  &__descr {
+    flex: 1 1 auto;
+    line-height: math.div(27, 18);
+    &:not(:last-child) {
+      @include adaptiveValue("padding-bottom", 50, 15);
+    }
+    @media (max-width: $mobileSmall) {
+      width: 110%;
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+  }
+  // .item-additional__more
+  &__more {
+  }
+
+  // .item-additional__img
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 8%;
+    right: -5%;
+    text-align: right;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    img {
+      max-width: 100%;
+    }
+    @media (max-width: $mobileSmall) {
+      top: 16%;
+      right: -25%;
+    }
+  }
+}
+//=================================================================================================================================
+//=================================================================================================================================
+.supplements {
+  @include adaptiveValue("padding-top", 60, 15);
+  @include adaptiveValue("padding-bottom", 120, 15);
 }
